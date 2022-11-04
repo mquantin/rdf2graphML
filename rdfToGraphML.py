@@ -2,6 +2,7 @@
 import rdflib
 import networkx as nx
 from getURIvalue import getValue
+import re
 
 ## CONSTANTS ##
 rdf_file_path = "/home/matthieu/Downloads/omekaRDF/files/items.ttl"
@@ -38,7 +39,7 @@ def feedGraph():
             graph.add_node(s.toPython(), label=o.toPython())
         elif predic == 'rdf:type':
             graph.add_node(s.toPython(), type=prefixForURI(o))#with only prefix not whole URI
-        elif not o.toPython().startswith('http://'):
+        elif not re.match('https?://', o.toPython()):
             #case other object not an other node URI but a simple string or integer
             graph.add_node(s.toPython())
             graph.nodes[s.toPython()][predic] = o.toPython()

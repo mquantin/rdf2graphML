@@ -3,17 +3,19 @@ import rdflib
 
 def getValue(uri, predicateRegex):
     g = rdflib.Graph()
+    returnValue = 'notFound'
     try:
         g.parse(uri)
         for s, p, o in g:
             if re.search(predicateRegex, p):
                 #print(value,p, o)
-                print('fetched data from ', uri)
-                return o.toPython()#get only the first value
+                print('\nok ', uri,'\n\t', o.toPython())
+                returnValue = o.toPython()#get only the first value
+                break
+        if returnValue == 'notFound':
+            print('\nNOK ', uri)
     except:
-        print(f"nothing for {predicateRegex} \n\t in {uri}")
+        print(f"\nNOK {uri} {predicateRegex}")
         if re.search('/page/', uri):
-            print('\t WARNING URI contains _page_ string, \n\t not rdf data, human readable version')
-        else:
-            print('\t check URI')
-        return('notFound')
+            print('\t WARNING URI contains _page_ string, not rdf data, human readable version')
+    return(returnValue)
