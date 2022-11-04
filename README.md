@@ -21,7 +21,7 @@ Instead of creating new nodes, a node attribute is added.
 
 For example
 
-'''title
+'''ttl
 <http://172.26.92.139/omeka-s/api/items/54> a crm:E12_Production ;
     rdfs:label "Construction des grands moulins de Loire" ;
     dcterms:description "construction grands moulins de Loire" ;
