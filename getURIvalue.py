@@ -32,4 +32,8 @@ def getValue(uri, predicateRegex):
         if filterLang(prefLabels, langPattern, False):
             print(f"OK {uri}")
             return filterLang(prefLabels, langPattern, True)
-    return prefLabels.pop()#else return any value
+    #if none of the langPattern is found then
+    default = prefLabels.pop()#else return any value
+    print(f"OK {uri}")
+    print(f'\t trouvé: {default.toPython()} ({default.language})')
+    return default.toPython()

@@ -24,7 +24,7 @@ def moreNodeAttributes():
             nodeObj['local'] = True
         else:
             nodeObj['local'] = False
-            nodeObj['label'] = getValue(n, 'skos/core#prefLabel')#|http://www.geonames.org/ontology#name')
+            nodeObj['label'] = getValue(n, 'skos/core#prefLabel|geonames.org/ontology#alternateName')
 
 def feedGraph():
     for s, p, o in rdf_graph.triples((None, None, None)):
