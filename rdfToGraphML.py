@@ -7,7 +7,7 @@ import re
 ## CONSTANTS ##
 rdf_file_path = "/home/matthieu/Downloads/omekaRDF/files/items.ttl"
 graphML_file_path = '/home/matthieu/Downloads/omekaRDF/files/items.graphml'
-local_nameSpace_dns =  'http://172.26.92.139'# if not in this nameSpace, fetch data values from URI
+local_nameSpace_dns =  'http://172.26.92.139'#if not in this nameSpace, fetch data values from URI
 
 rdf_graph = rdflib.Graph()
 rdf_graph.parse(rdf_file_path)
