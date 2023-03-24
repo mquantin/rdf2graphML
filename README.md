@@ -11,13 +11,14 @@ I use [Cytoscape](https://cytoscape.org/).
 
 # About the scripts
 One part is done for converting RDF in graphML
-Some assumption are done.
+Some assumption are done.  
 The value of the following properties won't create new node.
 - `rdf:type`
 - `rdfs:label`
-- any value that is not an URI but a string
+- any value that is not an URI but a dataType (literal, date, integer or whatever).
 
-Instead of creating new nodes, a node attribute is added.
+In these cases, instead of creating new nodes, a node attribute is added.
+So it doesn't care if the property is declared as owl:objectProperty or owl:dataTypeProperty.
 
 When a node is defined outside the local namespace (e.g. thesaurus URI), `prefLabel` attribute is fetched from that remote URI.
 
@@ -35,7 +36,7 @@ For example
         # string value: won't create an edge to a string node
         
         crm:p2_has_type <http://data.culture.fr/thesaurus/resource/ark:/67717/T96-820>,
-        # creates an edge to another node, get prefLLabel for it
+        # creates an edge to another node, get prefLabel for it
         
         crm:P14_carried_out_by <http://viaf.org/viaf/21377236> ;
         # creates an edge to another node, get prefLLabel for it
