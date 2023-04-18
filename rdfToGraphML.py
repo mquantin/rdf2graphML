@@ -4,10 +4,12 @@ import networkx as nx
 from getURIvalue import getValue
 import re
 
+#TODO: create fichier de correspondance uri : label pour ceux déjà requetés
+
 ## CONSTANTS ##
-rdf_file_path = "/home/matthieu/Downloads/omekaRDF/files/items.ttl"
-graphML_file_path = '/home/matthieu/Downloads/omekaRDF/files/items.graphml'
-local_nameSpace_dns =  'http://172.26.92.139'#if not in this nameSpace, fetch data values from URI
+rdf_file_path = "/Users/ls2n/Documents/utils/omekas2rdf/files/items.ttl"
+graphML_file_path = '/Users/ls2n/Downloads/itemscap44.graphml'
+local_nameSpace_dns =  'https://cap44.univ-nantes.fr'#if not in this nameSpace, fetch data values from URI
 
 rdf_graph = rdflib.Graph()
 rdf_graph.parse(rdf_file_path)
