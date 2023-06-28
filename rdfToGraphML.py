@@ -1,10 +1,9 @@
 
 import rdflib
 import networkx as nx
-from getURIvalue import getValue
+from getURIvalue import getValue, updateURIlabelLocalFile
 import re
 
-#TODO: create fichier de correspondance uri : label pour ceux déjà requetés
 
 ## CONSTANTS ##
 rdf_file_path = "/Users/ls2n/Documents/utils/omekas2rdf/files/items.ttl"
@@ -26,7 +25,7 @@ def moreNodeAttributes():
             nodeObj['local'] = True
         else:
             nodeObj['local'] = False
-            nodeObj['label'] = getValue(n, 'skos/core#prefLabel|geonames.org/ontology#alternateName')
+            nodeObj['label'] = getValue(n, 'skos/core#prefLabel|geonames.org/ontology#alternateName|geonames.org/ontology#name')
 
 def feedGraph():
     for s, p, o in rdf_graph.triples((None, None, None)):
@@ -52,6 +51,7 @@ def feedGraph():
 
 feedGraph()
 moreNodeAttributes()
+updateURIlabelLocalFile()
 
 nx.write_graphml(graph, graphML_file_path)
 print(f'wrote output in {graphML_file_path}')
