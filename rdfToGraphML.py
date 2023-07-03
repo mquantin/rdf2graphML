@@ -32,9 +32,7 @@ def feedGraph():
     for s, p, o in rdf_graph.triples((None, None, None)):
         # The .toPython() method converts rdflib objects into objects
         #  that any Python module can understand (e.g. str, int, float).
-
         predic = prefixForURI(p)
-        print(predic)
         #following cases won't create a new node for the object but only a attribute to the actual nodes
         # this simplifies the graph
         # create a label attribute with a short content if available
