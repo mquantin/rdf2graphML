@@ -2,6 +2,7 @@
 import rdflib
 import networkx as nx
 from getURIvalue import getValue, updateURIlabelLocalFile
+from rich import print
 import re
 from collections import defaultdict
 
@@ -24,8 +25,11 @@ def moreNodeAttributes():
         if n.startswith(local_nameSpace_dns):
             nodeObj['local'] = True
         else:
+            print(f"\n{n}")
             nodeObj['local'] = False
-            nodeObj['label'] = getValue(n, 'skos/core#prefLabel|geonames.org/ontology#alternateName|geonames.org/ontology#name')
+            nodeObj['label'] = getValue(n, '[Ll]abel|[nN]ame')
+            nodeObj['type'] = getValue(n, 'rdf-syntax-ns#type')
+
 
 def feedGraph():
     labelCandidates = defaultdict(list)
