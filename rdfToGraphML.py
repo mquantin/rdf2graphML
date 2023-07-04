@@ -1,7 +1,7 @@
 
 import rdflib
 import networkx as nx
-from getURIvalue import getValue, updateURIlabelLocalFile
+from getURIvalue import getValue, updateKnownURILocalFile
 from rich import print
 import re
 from collections import defaultdict
@@ -59,7 +59,7 @@ def feedGraph():
 
 feedGraph()
 moreNodeAttributes()
-updateURIlabelLocalFile()
+updateKnownURILocalFile()
 
 nx.write_graphml(graph, graphML_file_path)
 print(f'wrote output in {graphML_file_path}')

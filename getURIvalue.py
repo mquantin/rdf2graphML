@@ -14,14 +14,14 @@ class PropVal(NamedTuple):
 
 OK = "[green]OK[/green]"
 NOK = "[bold red]NOK[/bold red]"
-newLocalRecords = {}
-localRecords_yamlFilepath = "URIlabels.yml"#history of mapping URI->label to limit the number of http requests 
+newKnownURIs = {}
+KnownURIs_yamlFilepath = "knownURI.yml"#history of mapping URI->label to limit the number of http requests 
 
 
 
 
-with open(localRecords_yamlFilepath) as localRecordsFile:
-    existingLocalRecords = yaml.load(localRecordsFile, Loader=yaml.CLoader)# dict with {URI:label} as {key:value}
+with open(KnownURIs_yamlFilepath) as KnownURIsFile:
+    knownURIs = yaml.load(KnownURIsFile, Loader=yaml.CLoader)# dict with {URI:label} as {key:value}
     # for key, value in yaml_content.items():
     #     print(f"URI {key}: label {value}")
 
@@ -37,12 +37,12 @@ def filterLang(trouves):
 
 
 
-def newLocalRecord(uri, trouve):
-    newrecord = {trouve.prop.toPython(): trouve.val.toPython()}
-    if uri in newLocalRecords:
-        newLocalRecords[uri].update(newrecord) 
+def createNewURIrecord(uri, trouve):
+    newURIrecord = {trouve.prop.toPython(): trouve.val.toPython()}
+    if uri in newKnownURIs:
+        newKnownURIs[uri].update(newURIrecord) 
     else: 
-        newLocalRecords[uri] = newrecord
+        newKnownURIs[uri] = newURIrecord
 
 
 
@@ -50,8 +50,8 @@ def newLocalRecord(uri, trouve):
 def getValue(uri, predicateRegex):
     #print(f'Searching values for {predicateRegex}')
     #lookup local known values. Avoid useless http requests
-    if uri in existingLocalRecords:
-        for key, value in existingLocalRecords[uri].items():
+    if uri in knownURIs:
+        for key, value in knownURIs[uri].items():
             if re.search(predicateRegex, key):
                 print(f'\t {OK} {key}: {value}')
                 return value
@@ -76,19 +76,19 @@ def getValue(uri, predicateRegex):
         return "notFound"
     trouveInLang = filterLang(trouves)
     if trouveInLang:
-        newLocalRecord(uri, trouveInLang)
+        createNewURIrecord(uri, trouveInLang)
         return trouveInLang.val.toPython()
     #if none of the langPattern is found then
     default = trouves.pop()#else return any value
-    newLocalRecord(uri, default)
+    createNewURIrecord(uri, default)
     print(f'\t {OK} {default.prop}: {default.val}')
     return default.val.toPython()
 
-def updateURIlabelLocalFile():
-    if newLocalRecords:
-        existingLocalRecords.update(newLocalRecords)
-        with open(localRecords_yamlFilepath, "w") as URIlabelFilePath:
-            output = yaml.dump(existingLocalRecords, Dumper=yaml.CDumper)
-            URIlabelFilePath.write(output)
-        print(f'updated URIlabel mapping in {localRecords_yamlFilepath}')
+def updateKnownURILocalFile():
+    if newKnownURIs:
+        knownURIs.update(newKnownURIs)
+        with open(KnownURIs_yamlFilepath, "w") as KnownURIsFile:
+            output = yaml.dump(knownURIs, Dumper=yaml.CDumper)
+            KnownURIsFile.write(output)
+        print(f'updated URIlabel mapping in {KnownURIs_yamlFilepath}')
 
