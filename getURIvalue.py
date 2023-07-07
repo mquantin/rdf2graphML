@@ -27,7 +27,7 @@ with open(KnownURIs_yamlFilepath) as KnownURIsFile:
 
 
 
-def filterLang(trouves):
+def filterPref(trouves):
     for langPattern in ['fr', 'en', 'it']:#lang choices by order of pref
         for trouve in trouves:
             if isinstance(trouve.val, rdflib.term.Literal) :
@@ -46,25 +46,25 @@ def createNewURIrecord(uri, trouve):
 
 
 
-
-def getValue(uri, predicateRegex):
-    #print(f'Searching values for {predicateRegex}')
+def getValue(uri, predicateRegexList):
     #lookup local known values. Avoid useless http requests
     if uri in knownURIs:
         for key, value in knownURIs[uri].items():
-            if re.search(predicateRegex, key):
-                print(f'\t {OK} {key}: {value}')
-                return value
+            for predicateRegex in predicateRegexList:
+                if re.search(predicateRegex, key):
+                    print(f'\t {OK} {key}: {value}')
+                    return value
     #http requests
     g = rdflib.Graph()
     #foundValues = set()#maybe various values for one prop
-    trouves = set()#maybe various values each of the prop matching the regex pattern
+    trouves = []#maybe various values each of the prop matching the regex pattern
     try:
         g.parse(uri)
-        for s, p, o in g:
-            if re.search(predicateRegex, p):
-                trouves.add(PropVal(p, o))
-                #foundValues.add(o)
+        for predicateRegex in predicateRegexList:
+            for s, p, o in g:
+                if re.search(predicateRegex, p):
+                    trouves.append(PropVal(p, o))#trouves is in the same order as predicateRegex (for property)
+                    #foundValues.add(o)
     except:
         if re.search('/page/', uri):
             print(f'\t {NOK} URI contains _page_ string, not rdf data, human readable version')
@@ -74,12 +74,12 @@ def getValue(uri, predicateRegex):
     if not trouves:
         print(f'\t {NOK} predicate not found on URI')
         return "notFound"
-    trouveInLang = filterLang(trouves)
+    trouveInLang = filterPref(trouves)
     if trouveInLang:
         createNewURIrecord(uri, trouveInLang)
         return trouveInLang.val.toPython()
     #if none of the langPattern is found then
-    default = trouves.pop()#else return any value
+    default = trouves[0]#if nothing found in the pref languages, then get the first item, with property matching the first of the predicateRegexList
     createNewURIrecord(uri, default)
     print(f'\t {OK} {default.prop}: {default.val}')
     return default.val.toPython()

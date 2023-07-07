@@ -6,6 +6,13 @@ from rich import print
 import re
 from collections import defaultdict
 
+#TODO prefixForURI in getValue 
+#TODO lang order first then regex order (altLel (fr) > prefLabel (en))
+#TODO liste unique de "accepted labels" pour les noeuds iternes et les neouds externes (URI)
+#TODO déméler le filtrage de préférence dans getValue
+
+
+
 ## CONSTANTS ##
 rdf_file_path = "/Users/ls2n/Documents/utils/omekas2rdf/files/items.ttl"
 graphML_file_path = '/Users/ls2n/Downloads/itemscap44.graphml'
@@ -27,8 +34,18 @@ def moreNodeAttributes():
         else:
             print(f"\n{n}")
             nodeObj['local'] = False
-            nodeObj['label'] = getValue(n, '[Ll]abel|[nN]ame')
-            nodeObj['type'] = getValue(n, 'rdf-syntax-ns#type')
+            labelRegexPropPrefOrder = [
+                'skos/core#prefLabel', 
+                'rdf-schema#label', 
+                'skos/core#altLabel', 
+                '[#/]name',# matches schema:name gn:name  foaf:name
+                'geonames.org/ontology#alternateName', 
+                'geonames.org/ontology#shortName', 
+                'title'# pour DC
+                ]
+            nodeObj['label'] = getValue(n, labelRegexPropPrefOrder)#to get label as defined at the URI
+            print(nodeObj.get('type'))
+            #nodeObj['type'] = getValue(n, ['rdf-syntax-ns#type'])#to get class as defined at the URI
 
 
 def feedGraph():

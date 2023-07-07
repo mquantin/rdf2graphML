@@ -1,113 +1,83 @@
 http://data.culture.fr/thesaurus/resource/ark:/67717/T1-595:
   http://www.w3.org/2004/02/skos/core#prefLabel: chantier
 http://data.culture.fr/thesaurus/resource/ark:/67717/T15-103:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "g\xE9om\xE8tre"
 http://data.culture.fr/thesaurus/resource/ark:/67717/T15-8:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: architecte
 http://data.culture.fr/thesaurus/resource/ark:/67717/T96-1106:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
-  http://www.w3.org/2004/02/skos/core#altLabel: "d\xE9barcad\xE8re"
+  http://www.w3.org/2004/02/skos/core#prefLabel: "embarcad\xE8re"
 http://data.culture.fr/thesaurus/resource/ark:/67717/T96-1353:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: silo
 http://data.culture.fr/thesaurus/resource/ark:/67717/T96-617:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "entrep\xF4t commercial"
 http://data.culture.fr/thesaurus/resource/ark:/67717/T96-624:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: immeuble de bureaux
 http://data.culture.fr/thesaurus/resource/ark:/67717/T96-834:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: minoterie
 http://viaf.org/viaf/12317884:
-  http://schema.org/name: "Euge\u0300ne Be\u0301jot"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2006/gen/ont#InformationResource
+  http://www.w3.org/2004/02/skos/core#prefLabel: "Euge\u0300ne Be\u0301jot"
 http://viaf.org/viaf/132539787:
-  http://schema.org/name: "Loire-Atlantique. Archives de\u0301partementales"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://schema.org/Organization
+  http://www.w3.org/2004/02/skos/core#prefLabel: "Loire-Atlantique. Archives de\u0301partementales"
 http://viaf.org/viaf/143903205:
-  http://schema.org/name: "Bibliothe\u0300que nationale (France)"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://schema.org/Organization
+  http://www.w3.org/2004/02/skos/core#prefLabel: "Bibliothe\u0300que nationale (France)"
 http://viaf.org/viaf/157364120:
-  http://schema.org/name: "Cite\u0301 de l'architecture et du patrimoine (Paris)"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://schema.org/Organization
+  http://www.w3.org/2004/02/skos/core#prefLabel: "Cite\u0301 de l'architecture et
+    du patrimoine"
 http://viaf.org/viaf/21377236:
   http://schema.org/name: "Franc\u0327ois Hennebique"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2006/gen/ont#InformationResource
 http://viaf.org/viaf/306491150:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2006/gen/ont#InformationResource
   http://www.w3.org/2004/02/skos/core#prefLabel: Arnaud Biette
 http://viaf.org/viaf/308765785:
-  http://schema.org/name: "Ga\xEBlle Caudal"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2006/gen/ont#InformationResource
+  http://www.w3.org/2004/02/skos/core#prefLabel: "Gae\u0308lle Caudal"
+http://viaf.org/viaf/50158367854901282324:
+  http://schema.org/name: Sophie Audoux
 http://viaf.org/viaf/76439780:
-  http://schema.org/name: Jean-Louis Kerouanton
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2006/gen/ont#InformationResource
+  http://www.w3.org/2004/02/skos/core#prefLabel: Jean-Louis Kerouanton
 http://viaf.org/viaf/96353901:
-  http://schema.org/name: "Rene\u0301 Pinard"
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2006/gen/ont#InformationResource
+  http://www.w3.org/2004/02/skos/core#prefLabel: "Rene\u0301 Pinard"
+http://vocab.getty.edu/aat/300010775:
+  http://www.w3.org/2004/02/skos/core#prefLabel: "b\xE9ton arm\xE9"
 http://vocab.getty.edu/aat/300024987:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/ns/prov#Activity
-  http://www.w3.org/2004/02/skos/core#altLabel: architect
+  http://www.w3.org/2004/02/skos/core#prefLabel: architects
 https://sws.geonames.org/2990085:
   http://www.geonames.org/ontology#alternateName: Nort-sur-Erdre
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.geonames.org/ontology#Feature
 https://sws.geonames.org/2990969:
   http://www.geonames.org/ontology#alternateName: Nantes
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://xmlns.com/foaf/0.1/Document
 https://sws.geonames.org/3169071:
-  http://www.geonames.org/ontology#officialName: Rome
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.geonames.org/ontology#Feature
+  http://www.geonames.org/ontology#alternateName: Rome
 https://sws.geonames.org/6449078:
   http://www.geonames.org/ontology#shortName: Bouvron
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.geonames.org/ontology#Feature
 https://sws.geonames.org/6617195:
   http://www.geonames.org/ontology#shortName: Marquette-lez-Lille
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://xmlns.com/foaf/0.1/Document
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/1042d6cb-86c8-4ba9-bbfd-6d070e9f9844:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "2e moiti\xE9 du 20e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/277cf3a2-97e8-481f-aa7d-62cb7609da3b:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "18e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/2c15d08b-a718-4a91-af8f-71c696b32e0c:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "1er quart du 20e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/56387ea5-f963-49bd-aea4-56c4ecd1f14c:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "2e quart du 19e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/6f9f7eed-da2b-49f4-be26-61d6d85b2e1c:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "3e quart du 20e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/8bd1120c-fb4a-43fb-a1f0-bdbd31afda47:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "3e quart du 19e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/92287c1d-010b-49bd-bb0e-3e82798c9966:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "19e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/afa39eff-09bb-43d0-86f9-abc3ee70a352:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "1\xE8re moiti\xE9 du 20e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/bcce037d-aeae-4e69-ab45-e1af5d993cea:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "4e quart du 19e si\xE8cle"
+https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/c37aab47-fb71-4abd-b64b-58335c26278a:
+  http://www.w3.org/2004/02/skos/core#prefLabel: "2e moiti\xE9 du 18e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/c59f9c55-41ff-44fc-b53d-82fa85c06a7b:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "2e quart du 20e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/ccad15e7-4cd2-4601-8117-e8df60dd4cb7:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "2e moiti\xE9 du 19e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/cf851dbc-124a-42c3-94e1-00fb087b532a:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "20e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/d8a3610b-3210-4499-a61f-f1cfdb65e892:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "1er quart du 21e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/dfe4fe5b-87e7-4794-8111-30936d1189c2:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "4e quart du 18e si\xE8cle"
 https://thesaurus.inha.fr/thesaurus/resource/ark:/54721/f3ae6525-57d0-4caa-ba6a-7d3dd8d936ba:
-  http://www.w3.org/1999/02/22-rdf-syntax-ns#type: http://www.w3.org/2004/02/skos/core#Concept
   http://www.w3.org/2004/02/skos/core#prefLabel: "3e quart du 18e si\xE8cle"
